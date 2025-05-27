@@ -8,6 +8,8 @@ from os import makedirs
 from tempfile import TemporaryFile
 from typing import Optional
 from urllib.parse import urlsplit
+import threading
+from health_check import start_health_check
 
 import requests
 
@@ -368,5 +370,7 @@ def main() -> None:
     updater.idle()
 
 
-if __name__ == '__main__':
+# 🔰 Run the Bot
+if __name__ == "__main__":
+    threading.Thread(target=start_health_check, daemon=True).start()
     main()
