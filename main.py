@@ -3,6 +3,7 @@ from health_check import start_health_check
 import os
 import requests
 from yt_dlp import YoutubeDL
+import asyncio
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes, MessageHandler, filters
 
