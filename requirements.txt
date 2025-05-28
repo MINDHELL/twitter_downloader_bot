@@ -4,3 +4,4 @@ urllib3==1.26.18 # fix for ModuleNotFoundError
 snscrape
 flask
 requests
+yt-dlp
